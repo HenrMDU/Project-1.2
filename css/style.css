@@ -1,0 +1,659 @@
+/* Eric Meyer's CSS Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section, summary {
+	display: block;
+	}
+
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+	}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	}
+
+/* End of Eric Meyer's CSS Reset */
+
+
+* { /* Box-sizing reset: padding and border no longer effect the actual size of an element */
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+	}
+
+* img { /* This will remove boz-sizing on all images so they don't get messed up */
+	box-sizing: content-box;
+	}
+
+/* End of Resets
+-----------------------------------------------------------------------------*/
+
+html {height: 100%;}
+body {
+	font: 12px/18px Arial, sans-serif;
+	height: 100%;
+	line-height: 1;
+	}
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin:0 auto;
+	}
+img {
+	max-width:100%;
+	height:auto;
+	}
+h1 {
+	font-family: 'Open Sans', sans-serif;
+	font-weight:800;
+	font-size:48px;
+	}
+h2 {
+	font-family: 'Open Sans', sans-serif;
+	font-weight:800;
+	font-size:24px;
+	}
+h3 {
+	font-family: 'Open Sans', sans-serif;
+	font-weight:800;
+	font-size:18px;
+	}
+p {
+	font-family: 'Open Sans', sans-serif;
+	font-size:14px;
+	}
+.b {
+	font-weight:800;
+	font-size:12px;
+	}
+
+/* Header
+-----------------------------------------------------------------------------*/
+header {
+	height: 200px;
+	padding-top:50px;
+	position:relative
+	}
+#logo {
+	margin-left:15px;
+	width:225px;
+	}
+#mobile_nav {
+	position:absolute;
+	top:50px;
+	right:10px;
+	}
+#nav_all {display:none;}
+#search_box {display:none;}
+
+/* Full Screen Menu
+-------------------------------------------*/
+/* The Overlay (background) */
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */    
+    height: 100%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 2; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(255,255,255); /* White fallback color */
+    background-color: rgba(255,255,255, 0.9); /* White w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+    position: relative;
+    width: 100%; 
+    text-align: center; /* Centered text/links */
+    margin-top: 100px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay | Also include the X for close button */
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: inline-block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+	opacity:0.5;
+    color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+    position: absolute;
+    top: 17px;
+    right: -2px;
+    font-size: 100px;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+/* Full Screen Menu END
+-----------------------------------------------*/
+
+/* Main
+-----------------------------------------------------------------------------*/
+main {
+	padding: 0 0 150px; /* Keep the same as Footer height */
+	color:#3a3939;
+	text-align:center;
+	}
+#top_color {
+	background-color:#666666;
+	height:20px;
+	}
+#bot_color {
+	height: 3px;
+	background-color:#666666;
+	}
+.pixel_box img {display:none;}
+
+/* Home Page
+------------------------------------------------*/
+
+/* Slideshow Start */
+.mySlides {display:none; height:200px; width:100%; overflow:hidden;}
+.slide_mobile {display:none;}
+.mySlides img {min-height:200px; min-width:100%;}
+
+	/* Slideshow container */
+.slideshow-container {
+	width: 100%;
+	height: 200px;
+	position: relative;
+	margin: auto;
+	}
+
+	/* The dots/bullets/indicators */
+#dot_box {
+	text-align:center;
+	position:relative;
+	top:-25px;
+	z-index:1;
+	}
+#slideshow_bot {
+	height: 3px;
+	background-color:#666666;
+	position:relative;
+	top:-35px;/* top:-35px; if dots, -12px without*/
+	}
+.dot {
+	height: 14px;
+	width: 14px;
+	margin: 0 5px;
+	background-color: #bbb;
+	border: solid #FFF 3px;
+	display: inline-block;
+	transition: background-color 0.6s ease;
+	}
+.active {
+	background-color: #717171;
+	height: 20px;
+	width: 20px;
+	position:relative;
+	top:3px;
+	}
+
+	/* Fading animation */
+.fade {
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 1.5s;
+	animation-name: fade;
+	animation-duration: 1.5s;
+	}
+
+@-webkit-keyframes fade {
+	from {opacity: .4} 
+	to {opacity: 1}
+	}
+
+@keyframes fade {
+	from {opacity: .4} 
+	to {opacity: 1}
+	}
+
+/* Slideshow End */
+
+#game_mobile {margin-top:-30px;}
+#game_mobile1 {display:none;}
+#game_mobile2 {display:none;}
+
+/* Welcome Box */
+#welcome_box {
+	max-width: 400px;
+	margin:80px auto 80px auto;
+	padding:0 15px;
+	}
+#welcome_box p {
+	line-height:1.3;
+	text-align:justify;
+	-moz-text-align-last: center;
+    text-align-last: center;
+	}
+
+/* Info Box */
+#info_box {margin-top:80px;}
+#info_box a {
+	color:#3a3939;
+	font-weight:800;
+	}
+#info_box a:hover {
+	color:#FFF;
+	font-weight:800;
+	}
+
+	/* --- Ticket Box */
+#ticket_box {
+	width:100%;
+	background-color:#9fd4c7;
+	line-height:2;
+	padding:30px;
+	height:318px;
+	}
+#ticket_box p {line-height: 1.5;}
+
+	/* --- Googlemap Box */
+#googlemap_box {
+	width:100%;
+	border-left:solid 20px #9fd4c7;
+	border-right:solid 20px #9fd4c7;
+	height:278px;
+	}
+#googlemap_box img {height:278px;}
+.mobile {display:block;}
+.desk {display:none;}
+
+	/* --- Contact Box */
+#contact_box {
+	width:100%;
+	background-color:#9fd4c7;
+	padding:30px;
+	height:318px;
+	}
+#contact_box p {line-height: 1.5;}
+
+/* Information Page
+------------------------------------------------*/
+#the_info_page h1 {
+	line-height:1;
+	display:block;
+	margin-top:50px;
+	margin-bottom:50px;
+	font-size:35px;
+	}
+#the_info_page h2 {
+	text-align:left;
+	line-height:1;
+	display:block;
+	margin-bottom:20px;
+	}
+#the_info_page p {
+	line-height:1.5;
+	text-align:left;
+	}
+#the_info_page a {
+	color:#3a3939;
+	font-weight:800;
+	}
+#the_info_page a:hover {
+	color:#FFF;
+	font-weight:800;
+	}
+#the_info_page {
+	max-width:768px;
+	margin:0 auto;
+	padding:0 15px;
+	color:#333;
+	}
+#the_info_page article {
+	margin:50px auto;
+	clear:both;
+	}
+#the_info_page img {
+	margin:0 auto;
+	}
+
+	/* --- Opening Hours Box */
+#info_opening_hours_box {
+	max-width:450px;
+	background-color:#9fd4c7;
+	padding:30px;
+	text-align:left;
+	}
+
+	/* --- Prices Box */
+#info_prices_box {
+	max-width:450px;
+	background-color:#9fd4c7;
+	padding:30px;
+	text-align:left;
+	}
+
+	/* --- Guided Tours Box */
+#info_guided_tours_box {
+	max-width:450px;
+	background-color:#9fd4c7;
+	padding:30px;
+	text-align:left;
+	}
+#info_guided_tours_box input {
+	width:131px;
+	height:40px;
+	padding-left:8px;
+	padding-right:8px;
+	}
+#info_guided_tours_box select {
+	height:40px;
+	padding-left:8px;
+	padding-right:8px;
+	}
+#info_guided_tours_box button {
+	height:40px;
+	padding-left:20px;
+	padding-right:20px;
+	}
+
+	/* --- Googlemaps Box */
+#info_googlemaps {
+	max-width:450px;
+	background-color:#9fd4c7;
+	padding:30px;
+	text-align:left;
+	}
+
+/* The Museum Page
+------------------------------------------------*/
+#the_museum_page h1 {
+	line-height:1;
+	display:block;
+	margin-top:50px;
+	margin-bottom:50px;
+	font-size:35px;
+	}
+#the_museum_page h2 {
+	text-align:left;
+	line-height:1;
+	display:block;
+	margin-bottom:20px;
+	}
+#the_museum_page h3 {
+	text-align:left;
+	line-height:1;
+	font-size:14px;
+	}
+#the_museum_page p {
+	line-height:1.5;
+	text-align:left;
+	}
+#the_museum_page a {
+	color:#000;
+	font-weight:800;
+	}
+#the_museum_page a:hover {
+	color:#9FD4C7;
+	font-weight:800;
+	}
+#the_museum_page {
+	max-width:768px;
+	margin:0 auto;
+	padding:0 15px;
+	color:#333;
+	}
+#the_museum_nav {
+	background-color:#0CF;
+	}
+#the_museum_page article {
+	margin:50px auto;
+	clear:both;
+	}
+#the_museum_page img {
+	margin:0 auto;
+	}
+.float_right_img {display:none;}
+.hide_mobile {display:none;}
+
+.the_museum_img {
+	width:100%;
+	}
+
+/* Footer
+-----------------------------------------------------------------------------*/
+footer {
+	margin: -130px auto 20px auto; /* Keep the same as Footer height */
+	height: 150px; /* Remember to change in Main */
+	position: relative;
+	background: #666666;
+	color:#FFF;
+	}
+#top_footer { display:block; text-align:center; padding-top:30px;}
+#social_media_box { display:inline-block;}
+#social_media_box img {height:45px; margin:0 auto; padding:10px 2px;}
+#spon_box {clear:both;}
+#spon_box img {display:block; margin: 0 auto;}
+
+/* Media 495+
+-----------------------------------------------------------------------------*/
+@media only screen and (min-width: 495px) {
+.pixel_box {position:relative;}
+.pixel_box img {
+	position:absolute;
+	right:0px;
+	bottom:-36px;
+	width:100px;
+	display:block;
+	}
+
+/* The Museum Page
+------------------------------------------------*/
+.float_right_img {
+	float:right;
+	display:block;
+	padding-left:10px;
+	}
+}
+
+/* Media 500+
+-----------------------------------------------------------------------------*/
+@media only screen and (min-width: 500px) {
+#logo {
+	margin-left:15px;
+	width:398px;
+	}
+}
+
+/* Media 600+
+-----------------------------------------------------------------------------*/
+@media only screen and (min-width: 600px) {
+header {height: 250px;}
+#logo {margin-left:10px;}
+#search_box {
+	display:inline-block;
+	position:absolute;
+	top:55px;
+	right:0;
+	text-align:right;
+	}
+#search_icon {
+	margin-bottom:-6px;
+	margin-right:2px;
+	display:inline-block;
+	width:20px;
+	height:auto;
+	}
+#search_box input {width:130px;}
+.flag {margin-top:5px;}
+#mobile_nav {display: none;}
+#nav_all {
+	margin-top:50px;
+	display:block;
+	}
+#nav_all ul {text-align:center;}
+#nav_all li {
+	display:inline;
+	padding:0 8px;
+	font-size:10px;
+	font-weight:800;
+	padding-bottom:10px;
+	}
+#nav_all li a {
+	text-decoration:none;
+	color:#000;
+	padding-bottom:10px;
+	padding-top:10px;
+	}
+#nav_all .menu_icon {
+	padding-right: 5px;
+	margin-bottom:-12px; /* Menu text center */
+	}
+.hover:hover {color:#9FD4C7;} /* Hover */
+.page {text-decoration:underline;} /* Active Page */
+
+/* Home Page
+------------------------------------------------*/
+#game_mobile {display:none;}
+#game_mobile1 {
+	display:block;
+	margin-left:20px;
+	margin-top:-6px;
+	margin-bottom:-84px;
+	}
+#welcome_box_design {
+	border:solid 3px #666666;
+	width: 100%;
+	position:relative;
+	z-index:-1;
+	margin-bottom:40px;
+	}
+
+
+/* The Museum Page
+------------------------------------------------*/
+#the_museum_page p {text-align:justify;}
+#the_museum_page img {
+	max-width:49.7%;
+	display:inline-block;
+	margin:0 auto;
+	}
+.hide_mobile {display:inline-block;}
+}
+
+/* Media685+
+-----------------------------------------------------------------------------*/
+@media only screen and (min-width: 685px) {
+#nav_all li {
+	display:inline;
+	padding:0 15px;
+	}
+#nav_all .menu_icon {padding-right: 10px;}
+}
+
+/* Media 765+
+-----------------------------------------------------------------------------*/
+@media only screen and (min-width: 765px) {
+main {padding: 0 0 490px;} /* Keep the same as Footer height */
+footer {clear:both;}
+
+/* Home Page
+------------------------------------------------*/
+#ticket_box {
+	width:33%;
+	float:left;
+	}
+#googlemap_box {
+	width:34%;
+	float:left;
+	border-bottom:solid 20px #9fd4c7;
+	border-top:solid 20px #9fd4c7;
+	border-left:hidden;
+	border-right:hidden;
+	height:318px;
+	}
+.mobile { display:none;} /* Googlemaps Image Home Page */
+.desk { display:block;} /* Googlemaps Image Home Page */
+#contact_box {
+	width:33%;
+	float:left;
+	}
+
+/* Information & Museum Page
+------------------------------------------------*/
+#the_museum_page {margin-bottom:-335px;}
+#the_info_page {margin-bottom:-335px;}
+}
+
+/* Media 795+
+-----------------------------------------------------------------------------*/
+@media only screen and (min-width: 795px) {
+#nav_all li {font-size:12px;}
+}
+
+/* Media 890+
+-----------------------------------------------------------------------------*/
+@media only screen and (min-width: 890px) {
+.wrapper {max-width:1024px;}
+footer {max-width:1024px;}
+
+/* Home Page
+------------------------------------------------*/
+#game_mobile1 {display:none;}
+#game_mobile2 {
+	display:block;
+	margin-left:20px;
+	margin-top:-8px;
+	margin-bottom:-168px;
+	}
+}
+
+/* Media 1024+
+-----------------------------------------------------------------------------*/
+@media only screen and (min-width: 1024px) {
+#logo {margin-left:0px;}
+#nav_all li {padding:0 35px;}
+}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script><![endif]-->
+	<title>Computerspielemuseum - Information</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="keywords" content="opening, hours, times, tickets, prices, price, map, guide, tours" />
+	<meta name="description" content="Find all the information you need to visit the Computerspielemuseum." />
+	<link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+		<header>
+            <a href="index.html"><img id="logo" src="img/computerspielemuseum_logo.png" width="398" height="89" alt="Computerspielemuseum Logo"></a>
+            
+            <!-- Use any element to open/show the overlay navigation menu -->
+            <span onclick="openNav()"><img id="mobile_nav" src="img/menu_mobile_icon.png" height="50" width="50" alt="mobile_nav"></span>
+            
+            <nav id="nav_all"><!-- Normal Navigation: Class "page" = current page active -->
+                <ul>
+                    <li><a href="index.html"><img class="menu_icon" src="img/nav_icons/home_icon.png" width="32" height="32" alt="Home Icon"><span class="hover">HOME</span></a></li>
+                    <li><a href="information.html"><img class="menu_icon" src="img/nav_icons/info_icon.png" width="32" height="32" alt="Home Icon"><span class="hover page">INFORMATION</span></a></li>
+                    <li><a href="the_museum.html"><img class="menu_icon" src="img/nav_icons/museum_icon.png" width="32" height="32" alt="Home Icon"><span class="hover">THE MUSEUM</span></a></li>
+                    <li><a href="#"><img class="menu_icon" src="img/nav_icons/about_icon.png" width="32" height="32" alt="Home Icon"><span class="hover">ABOUT US</span></a></li>
+                    <li><a href="#"><img class="menu_icon" src="img/nav_icons/contact_icon.png" width="32" height="32" alt="Home Icon"><span class="hover">CONTACT</span></a></li>
+                </ul>
+            </nav><!-- Normal Navigation END -->
+            
+            <nav id="nav_mobile"><!-- Full Screen Burgermenu -->
+                <div id="myNav" class="overlay"><!-- The overlay -->
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a><!-- Button to close the overlay navigation -->
+                    
+                    <div class="overlay-content"><!-- Overlay content -->
+                        <a href="index.html"><img src="img/nav_icons/m_home_icon.png" alt="Home"></a>
+                        <a href="information.html"><img src="img/nav_icons/m_info_icon.png" alt="Information"></a>
+                        <br><a href="the_museum.html"><img src="img/nav_icons/m_museum_icon.png" alt="The Museum"></a>
+                        <a href="#"><img src="img/nav_icons/m_about_icon.png" alt="About Us"></a>
+                        <br><a href="#"><img src="img/nav_icons/m_contact_icon.png" alt="Contact"></a>
+                        <a href="#"><img src="img/nav_icons/m_search_icon.png" alt="Search"></a>
+                    </div><!-- Overlay content END -->
+                </div><!-- The overlay END -->
+            </nav><!-- Full Screen Burgermenu END -->
+            <div id="search_box">
+                <form action="#">
+                    <img id="search_icon" src="img/nav_icons/search_icon.png" alt="Search">
+                    <input type="search" name="search">
+                </form>
+                
+                <img class="flag" src="img/nav_icons/de.png" alt="DE">
+                <img class="flag" src="img/nav_icons/en.png" alt="EN">
+                <img class="flag" src="img/nav_icons/pl.png" alt="PL">
+            </div>
+        </header>
+        
+		<main>
+        	<div id="top_color"></div>
+            
+            <div id="the_info_page">
+                <h1>INFORMATION</h1>
+                <div class="pixel_box">
+                    <img src="img/pixel.png" alt="Pixels">
+                </div>
+                <div id="bot_color"></div>
+                
+                <article id="info_opening_hours_box">
+                	<h2>OPENING HOURS</h2>
+                    <p>
+                    <span class="b">All days 10:00 a.m. - 8:00 p.m.</span><br><br>
+                    <span class="b">Opening hours during holidays:</span><br>
+                    The Computerspielemuseum will be open every day including all national holidays in 2016<br><br>
+                    <span class="b">Opening hours during Christmas season 2016:</span><br>
+                    December 24 - 31: 10:00am – 3:00pm<br>
+                    January 1: 12:00pm – 8:00pm
+                    </p>
+                </article>
+                
+                <article id="info_prices_box">
+                	<h2>PRICES</h2>
+                    <p>
+                    Your admission fee helps to ensure that the Computerspiele Museum keeps running. We thank you wholeheartedly for your contribution to this museum. We’re also happy to help you find various discounts for individuals, families, and groups. We hope you stop by and enjoy your stay.<br><br>
+
+                    <span class="b">Regular: € 8</span><br><br>
+                    
+                    <span class="b">Reduced: € 5</span><br>
+                    (for 6-17 years old, students, apprentices, volunteers, retired, unemployed, severely handicapped - appropriate ID card required)<br><br>
+                    
+                    <span class="b">Family ticket: € 17</span><br>
+                    (max. 5 persons, max. 2 adults)
+                    </p>
+                </article>
+                
+                <article id="info_guided_tours_box">
+                <h2>GUIDED TOURS</h2>
+                <form action="#">
+                    <select name="guide_types">
+                    	<option value="type_1">Public Tours</option>
+                        <option value="type_1">Private Tours</option>
+                        <option value="type_1">Special Tours</option>
+                    </select>
+                    
+                    <select name="guide_length">
+                    	<option value="type_1">1 Hour</option>
+                        <option value="type_1">2 Hours</option>
+                        <option value="type_1">3 Hours</option>
+                    </select>
+                    <br><br>
+                    <button type="button">Price</button>
+                    <input>
+                </form>
+                <br><p><a href="#">Read more</a></p>
+                </article>
+                
+                <article id="info_googlemaps">
+                	<h2>FIND THE MUSEUM</h2>
+                    <img src="img/googlemaps1.jpg" alt="Google Maps">
+                </article>
+            </div><!-- the_info_page END-->
+		</main>
+    </div><!-- wrapper -->
+    
+    <footer>
+        <div id="top_footer"><!-- Footer Top -->
+            <div id="social_media_box"><!-- Social Media Box -->
+                <a href="https://www.instagram.com/computerspielemuseum_berlin/" target="_blank"><img src="img/social_icons/instagram.png" alt="Instagram"></a>
+                <a href="https://www.facebook.com/Computerspielemuseum" target="_blank"><img src="img/social_icons/facebook.png" alt="Facebook"></a>
+                <a href="https://www.youtube.com/user/ComputerspieleMuseum" target="_blank"><img src="img/social_icons/youtube.png" alt="YouTube"></a>
+                <a href="https://twitter.com/CSM_Berlin" target="_blank"><img src="img/social_icons/twitter.png" alt="Twitter"></a>
+                <a href="mailto:service@computerspielemuseum.de" target="_blank"><img src="img/social_icons/mail.png" alt="Mail"></a>
+            </div>
+        	<p>&copy; 2016 All rights Reserved</p>
+        </div>
+    </footer>
+    
+    <div id="spon_box"><!-- Footer Sponser Box -->
+        <img src="img/spon.jpg" alt="Sponsors">
+    </div><!-- Footer Sponser Box END -->
+
+<script type="text/javascript" src="js/javascript.js"></script>
+</body>
+</html>

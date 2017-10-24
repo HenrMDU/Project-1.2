@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script><![endif]-->
+	<title>Computerspielemuseum - Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="keywords" content="computerspielemuseum, computerspiele, museum, videogames, games" />
+	<meta name="description" content="If you are interested in old arcade games, video games or simply interested in learning about the technological evolution through the ages, this is the place for you." />
+	<link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+		<header>
+            <a href="index.html"><img id="logo" src="img/computerspielemuseum_logo.png" width="398" height="89" alt="Computerspielemuseum Logo"></a>
+            
+            <!-- Use any element to open/show the overlay navigation menu -->
+            <span onclick="openNav()"><img id="mobile_nav" src="img/menu_mobile_icon.png" height="50" width="50" alt="mobile_nav"></span>
+            
+            <nav id="nav_all"><!-- Normal Navigation: Class "page" = current page active -->
+                <ul>
+                    <li><a href="index.html"><img class="menu_icon" src="img/nav_icons/home_icon.png" width="32" height="32" alt="Home Icon"><span class="hover page">HOME</span></a></li>
+                    <li><a href="information.html"><img class="menu_icon" src="img/nav_icons/info_icon.png" width="32" height="32" alt="Home Icon"><span class="hover">INFORMATION</span></a></li>
+                    <li><a href="the_museum.html"><img class="menu_icon" src="img/nav_icons/museum_icon.png" width="32" height="32" alt="Home Icon"><span class="hover">THE MUSEUM</span></a></li>
+                    <li><a href="#"><img class="menu_icon" src="img/nav_icons/about_icon.png" width="32" height="32" alt="Home Icon"><span class="hover">ABOUT US</span></a></li>
+                    <li><a href="#"><img class="menu_icon" src="img/nav_icons/contact_icon.png" width="32" height="32" alt="Home Icon"><span class="hover">CONTACT</span></a></li>
+                </ul>
+            </nav><!-- Normal Navigation END -->
+            
+            <nav id="nav_mobile"><!-- Full Screen Burgermenu -->
+                <div id="myNav" class="overlay"><!-- The overlay -->
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a><!-- Button to close the overlay navigation -->
+                    
+                    <div class="overlay-content"><!-- Overlay content -->
+                        <a href="index.html"><img src="img/nav_icons/m_home_icon.png" alt="Home"></a>
+                        <a href="information.html"><img src="img/nav_icons/m_info_icon.png" alt="Information"></a>
+                        <br><a href="the_museum.html"><img src="img/nav_icons/m_museum_icon.png" alt="The Museum"></a>
+                        <a href="#"><img src="img/nav_icons/m_about_icon.png" alt="About Us"></a>
+                        <br><a href="#"><img src="img/nav_icons/m_contact_icon.png" alt="Contact"></a>
+                        <a href="#"><img src="img/nav_icons/m_search_icon.png" alt="Search"></a>
+                    </div><!-- Overlay content END -->
+                </div><!-- The overlay END -->
+            </nav><!-- Full Screen Burgermenu END -->
+            <div id="search_box">
+                <form action="#">
+                    <img id="search_icon" src="img/nav_icons/search_icon.png" alt="Search">
+                    <input type="search" name="search">
+                </form>
+                
+                <img class="flag" src="img/nav_icons/de.png" alt="DE">
+                <img class="flag" src="img/nav_icons/en.png" alt="EN">
+                <img class="flag" src="img/nav_icons/pl.png" alt="PL">
+            </div>
+        </header>
+        
+		<main>
+            <div id="top_color"></div>
+            <div class="slideshow-container"><!-- Slideshow -->
+                <div class="mySlides fade slide_mobile"><img src="img/slide_img/slide_1.jpg" alt="slide 1"></div>
+                <div class="mySlides fade slide_mobile"><img src="img/slide_img/slide_2.jpg" alt="slide 2"></div>
+                <div class="mySlides fade slide_mobile"><img src="img/slide_img/slide_3.jpg" alt="slide 3"></div>
+                <div class="mySlides fade slide_mobile"><img src="img/slide_img/slide_4.jpg" alt="slide 4"></div>
+                <div class="mySlides fade slide_mobile"><img src="img/slide_img/slide_5.jpg" alt="slide 5"></div>
+            </div>
+            <br>
+            <div id="dot_box">
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span>
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+            </div>
+            <div id="slideshow_bot"></div><!-- Slideshow END -->
+            
+            <img id="game_mobile" src="img/game.png" alt="Game">
+            
+            <div id="welcome_box_design"><!-- Welcome Box Outside -->
+                <img id="game_mobile1" src="img/game1.png" alt="Game">
+                <img id="game_mobile2" src="img/game2.png" alt="Game">
+                
+				<div id="welcome_box"><!-- Welcome Box Content -->
+                    <h1>WELCOME</h1> <br>
+                    <h2>TO THE COMPUTERSPIELE<wbr>MUSEUM</h2> <br><br>
+                    <p>We open our doors to a technological experience at The Computerspiele Museum. If you are interested in old arcade games, video games or simply interested in learning about the technological evolution through the ages, this is the place for you. Come to our museum and take a look around. You got a chance to play some games and learn at the same time. We guarantee a great experience.</p> <br><br>
+                    <h3>OPEN ALL DAYS 10AM - 8PM</h3>
+                </div><!-- Welcome Box Content END -->
+            </div><!-- Welcome Box Outside END -->
+            
+            <div id="info_box"><!-- Info Box: Tickets, Googlemaps and Contact -->
+                <div id="ticket_box"><!-- Tickets Box -->
+                	<h2>TICKETS</h2>
+                    <p>REGULAR € 8 <br> REDUCED € 5 <br><br> FAMILY € 17 <br> max. 5 people, max. 2 adults <br><br>  GROUPS € 6 <br> SCHOOL GROUPS € 3 <br><br> <a href="#">BUY ONLINE</a></p>
+                </div><!-- Tickets Box END -->
+                
+                <div id="googlemap_box"><!-- Googlemaps Box -->
+                	<a href="https://www.google.dk/maps/place/Karl-Marx-Allee+93A,+10243+Berlin,+Tyskland/@52.5176932,13.4398167,17z/data=!3m1!4b1!4m5!3m4!1s0x47a84e6a0d4f0095:0x40c04dcb71f90c2a!8m2!3d52.51769!4d13.442?hl=da" target="_blank"><img class="mobile" src="img/googlemaps1.jpg" alt="Google Map"></a>
+                    <a href="https://www.google.dk/maps/place/Karl-Marx-Allee+93A,+10243+Berlin,+Tyskland/@52.5176932,13.4398167,17z/data=!3m1!4b1!4m5!3m4!1s0x47a84e6a0d4f0095:0x40c04dcb71f90c2a!8m2!3d52.51769!4d13.442?hl=da" target="_blank"><img class="desk" src="img/googlemaps2.jpg" alt="Google Map"></a>
+                </div><!-- Googlemaps Box END -->
+                	
+				<div id="contact_box"><!-- Contact Box -->
+                    <h2>CONTACT</h2>
+                    <p>Karl-Marx-Allee 93a, <br> 10243 Berlin <br><br> service@ <br> computerspielemuseum.de <br><br> Phone (visitor service) <br> +49 30 6098 8577</p>
+				</div><!-- Contact Box END -->
+            </div><!-- Info Box END -->
+		</main>
+    </div><!-- wrapper END -->
+    
+    <footer>
+        <div id="top_footer"><!-- Footer Top -->
+            <div id="social_media_box"><!-- Social Media Box -->
+                <a href="https://www.instagram.com/computerspielemuseum_berlin/" target="_blank"><img src="img/social_icons/instagram.png" alt="Instagram"></a>
+                <a href="https://www.facebook.com/Computerspielemuseum" target="_blank"><img src="img/social_icons/facebook.png" alt="Facebook"></a>
+                <a href="https://www.youtube.com/user/ComputerspieleMuseum" target="_blank"><img src="img/social_icons/youtube.png" alt="YouTube"></a>
+                <a href="https://twitter.com/CSM_Berlin" target="_blank"><img src="img/social_icons/twitter.png" alt="Twitter"></a>
+                <a href="mailto:service@computerspielemuseum.de" target="_blank"><img src="img/social_icons/mail.png" alt="Mail"></a>
+            </div>
+        	<p>&copy; 2016 All rights Reserved</p>
+        </div>
+    </footer>
+    
+    <div id="spon_box"><!-- Footer Sponser Box -->
+        <img src="img/spon.jpg" alt="Sponsors">
+    </div><!-- Footer Sponser Box END -->
+
+<script type="text/javascript" src="js/javascript.js"></script>
+</body>
+</html>
